@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
+    username: sa
+    password: 
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+
+supabase:
+  jwt:
+    secret: test_secret_placeholder_for_build
+  url: http://localhost:8000
+  anon-key: test_anon_key_placeholder
