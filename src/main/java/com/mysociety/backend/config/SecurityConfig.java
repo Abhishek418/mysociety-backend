@@ -31,7 +31,7 @@ public class SecurityConfig {
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .csrf(csrf -> csrf.disable()) // Stateless REST API
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/v1/public/**").permitAll()
+                        .requestMatchers("/api/v1/public/**", "/actuator/health").permitAll()
                         .anyRequest().authenticated())
                 .oauth2ResourceServer(oauth2 -> oauth2
                         .jwt(jwt -> jwt
