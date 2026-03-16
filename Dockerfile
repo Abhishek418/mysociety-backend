@@ -1,5 +1,5 @@
-# Build stage
-FROM gradle:8.12-jdk17 AS build
+# Build stage - Updated to use Gradle 8.14
+FROM gradle:8.14-jdk17 AS build
 COPY --chown=gradle:gradle . /home/gradle/src
 WORKDIR /home/gradle/src
 RUN gradle build --no-daemon -x test
